@@ -29,9 +29,9 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
      * Verifica che il JWT sia corretto, trasforma il JWT in un utente
      */
     @Override
-    protected void doFilterInternal(HttpServletRequest request,
-                                    HttpServletResponse response,
-                                    FilterChain filterChain) throws ServletException, IOException {
+    protected void doFilterInternal(@SuppressWarnings("null") HttpServletRequest request,
+                                    @SuppressWarnings("null") HttpServletResponse response,
+                                    @SuppressWarnings("null") FilterChain filterChain) throws ServletException, IOException {
         String token = getJWTFromRequest(request);
         if (StringUtils.hasText(token) && tokenGenerator.validateToken(token)) {
             String username = tokenGenerator.getUsernameFromJWT(token);

@@ -25,7 +25,7 @@ public class UserAdditionalInfo
 
     private String nome;
     private String cognome;
-    private int eta;
+    private String numeroCellulare;
     private LocalDate dob;
     private String indirizzo;
 

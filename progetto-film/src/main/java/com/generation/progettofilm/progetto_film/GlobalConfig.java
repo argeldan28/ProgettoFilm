@@ -12,7 +12,7 @@ public class GlobalConfig implements WebMvcConfigurer
     private String prefix;
 
     @Override
-    public void configurePathMatch(PathMatchConfigurer configurer) 
+    public void configurePathMatch(@SuppressWarnings("null") PathMatchConfigurer configurer) 
     {
         configurer.addPathPrefix(prefix, c -> true);
     }
